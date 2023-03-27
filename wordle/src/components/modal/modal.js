@@ -5,32 +5,23 @@ import { useState, useEffect } from "react";
 
 const Modal = ({ isCorrect, turn, solution }) => {
 
-    const [backendData, setBackendData] = useState([]);
-    let scoresArr = [];
+    const [backendData, setBackendData] = useState(null);
 
-    useEffect(() => {
+    //create form and submit button that takes state of name and pass this axios.post function object
+    // then post to axios server
+    // then write function that get's from our server and renders a scores table
 
+    function PostName() {
         axios.post('/api', {
             "name": "reggy",
             "guesses": turn,
             "solution": solution
         }).then(response => {
-            console.log(response.data)
+            const data = response.data;
+            console.log(data)
         })
-    }, []);
 
-    // options to get data from API via fetch and axios get methods-- may no longer need!
-    // useEffect(() => {
-    //     axios.get('/api').then(function (data) {
-    //         console.log(data.data);
-    //         data.data.map((item) => {
-    //             scoresArr.push(item)
-    //             console.log(scoresArr)
-    //         })
-    //         // setBackendData(data.data[0].name)
-    //     })
-    // }, []);
-    // 
+    }
 
     return <div className="modal">
         {isCorrect && (
@@ -38,7 +29,7 @@ const Modal = ({ isCorrect, turn, solution }) => {
                 <h1>You Win!</h1>
                 <h2 className="solution">{solution}</h2>
                 <p>You found the solution in {turn} guesses.</p>
-                <h1>{backendData.name}</h1>
+                <button onClick={PostName}>Click</button>
             </div>
         )}
         {!isCorrect && (
