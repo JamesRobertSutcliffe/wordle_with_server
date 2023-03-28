@@ -105,7 +105,7 @@ code {
   transition: all 0.3s ease-in;
 }
 
-/* MODAL */
+/* SCORES */
 
 button,
 input {
@@ -129,6 +129,8 @@ th {
   text-align: center;
   width: 80%;
 }
+
+/* MODAL */
 
 .modal {
   background: rgba(255, 255, 255, 0.7);

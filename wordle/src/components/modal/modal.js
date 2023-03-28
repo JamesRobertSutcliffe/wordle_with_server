@@ -14,7 +14,6 @@ const Modal = ({ isCorrect, turn, solution }) => {
     // Updates name variable for submission on key up grabbing data from input below//
     const updateName = (e) => {
         setName(e.target.value)
-        console.log(name);
     }
 
     //POSTS to api and renders data of high scores//
@@ -27,7 +26,6 @@ const Modal = ({ isCorrect, turn, solution }) => {
             "solution": solution
         }).then(response => {
             const data = response.data;
-            console.log(data)
             setBackendData(data.map((item) => {
                 return <Scores name={item.name}
                     guesses={item.guesses}

@@ -8,12 +8,9 @@ const useWordle = (solution) => {
     const [history, setHistory] = useState(["hello"]);
     const [isCorrect, setIsCorrect] = useState(false);
     const [usedKeys, setUsedKeys] = useState({});
-    const [name, setName] = useState("");
 
-    const updateName = (e) => {
-        setName(e.target.value)
-    }
 
+    // Format guess function develops correctly colours the guesses character//
 
     const formatGuess = () => {
         let solutionArray = [...solution];
@@ -38,6 +35,8 @@ const useWordle = (solution) => {
         return formattedGuess;
 
     };
+
+    // Add new guess function add's new input from user and updates all neccessary parameters for game function//
 
     const addNewGuess = (formattedGuess) => {
         if (currentGuess === solution) {
@@ -80,6 +79,8 @@ const useWordle = (solution) => {
         setCurrentGuess('');
     };
 
+
+    // event listener that takes in neccessary input form user//
     const handleKeyup = ({ key }) => {
         if (key === 'Enter') {
             if (turn > 5) {
@@ -111,7 +112,7 @@ const useWordle = (solution) => {
         }
     };
 
-    return { turn, currentGuess, guesses, isCorrect, usedKeys, handleKeyup, updateName, name }
+    return { turn, currentGuess, guesses, isCorrect, usedKeys, handleKeyup }
 
 
 }
