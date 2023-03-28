@@ -2,6 +2,7 @@
 import axios from "axios";
 import react from "react";
 import { useState, useEffect } from "react";
+import Scores from "../scores/scores";
 
 const Modal = ({ isCorrect, turn, solution }) => {
 
@@ -19,9 +20,16 @@ const Modal = ({ isCorrect, turn, solution }) => {
         }).then(response => {
             const data = response.data;
             console.log(data)
-        })
+            setBackendData(data.map((item) => {
+                return `${item.name}
+                ${item.guesses}
+                ${item.solution}`;
+            }));
 
+        })
     }
+
+
 
     return <div className="modal">
         {isCorrect && (
@@ -30,6 +38,8 @@ const Modal = ({ isCorrect, turn, solution }) => {
                 <h2 className="solution">{solution}</h2>
                 <p>You found the solution in {turn} guesses.</p>
                 <button onClick={PostName}>Click</button>
+                <div>{backendData}</div>
+
             </div>
         )}
         {!isCorrect && (
