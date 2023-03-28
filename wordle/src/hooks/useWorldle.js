@@ -8,6 +8,12 @@ const useWordle = (solution) => {
     const [history, setHistory] = useState(["hello"]);
     const [isCorrect, setIsCorrect] = useState(false);
     const [usedKeys, setUsedKeys] = useState({});
+    const [name, setName] = useState("");
+
+    const updateName = (e) => {
+        setName(e.target.value)
+    }
+
 
     const formatGuess = () => {
         let solutionArray = [...solution];
@@ -105,7 +111,7 @@ const useWordle = (solution) => {
         }
     };
 
-    return { turn, currentGuess, guesses, isCorrect, usedKeys, handleKeyup }
+    return { turn, currentGuess, guesses, isCorrect, usedKeys, handleKeyup, updateName, name }
 
 
 }

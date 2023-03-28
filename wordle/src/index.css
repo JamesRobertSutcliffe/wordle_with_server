@@ -107,6 +107,29 @@ code {
 
 /* MODAL */
 
+button,
+input {
+  padding: 5px;
+  margin: 5px
+}
+
+.scores td,
+th {
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  width: 39.5%;
+}
+
+.reverse {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  width: 80%;
+}
+
 .modal {
   background: rgba(255, 255, 255, 0.7);
   position: fixed;
@@ -114,6 +137,7 @@ code {
   height: 100%;
   top: 0;
   left: 0;
+  overflow: scroll;
 }
 
 .modal div {

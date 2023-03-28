@@ -5,13 +5,11 @@ import axios from "axios";
 const Scores = ({ name, guesses, solution }) => {
 
     return (
-        <div>
-
-            <p>{name}</p>
-            <p>{guesses}</p>
-            <p>{solution}</p>
-
-        </div>
+        <tr className="scores">
+            <td>{name}</td>
+            <td>{guesses}</td>
+            <td>{solution}</td>
+        </tr>
     )
 
 }

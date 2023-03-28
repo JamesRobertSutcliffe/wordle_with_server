@@ -9,12 +9,12 @@ const scores = [
     {
         "name": "James",
         "guesses": "5",
-        "solution": "chips"
+        "solution": "CHIPS"
     },
     {
         "name": "Sarah",
         "guesses": "2",
-        "solution": "pease"
+        "solution": "PEASE"
     }
 ]
 
