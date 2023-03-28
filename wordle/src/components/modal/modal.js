@@ -21,15 +21,13 @@ const Modal = ({ isCorrect, turn, solution }) => {
             const data = response.data;
             console.log(data)
             setBackendData(data.map((item) => {
-                return `${item.name}
-                ${item.guesses}
-                ${item.solution}`;
+                return <Scores name={item.name}
+                    guesses={item.guesses}
+                    solution={item.solution} />
             }));
 
         })
     }
-
-
 
     return <div className="modal">
         {isCorrect && (

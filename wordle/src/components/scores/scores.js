@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 
-const Scores = ({ props }) => {
+const Scores = ({ name, guesses, solution }) => {
 
     return (
         <div>
 
-            <p>{props.name}</p>
-            <p>{props.guesses}</p>
-            <p>{props.solution}</p>
+            <p>{name}</p>
+            <p>{guesses}</p>
+            <p>{solution}</p>
 
         </div>
     )
