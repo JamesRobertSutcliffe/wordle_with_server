@@ -1,6 +1,6 @@
 # Wordle Clone with Server
 
-#![Wordle App](assets/images/Screenshot.png)
+![Wordle React](assets/images/Screenshot4.png)
 
 ## Description
 
@@ -41,7 +41,7 @@ The rules of the same are as follows:
 - Letters can be used more than once
 - Answers are never plurals
 
-![Wordle React](assets/images/Screenshot4.png)
+#![Wordle App](assets/images/Screenshot.png)
 
 ## Credits
 
