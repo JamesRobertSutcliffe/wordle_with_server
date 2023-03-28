@@ -27,7 +27,7 @@ In order to run the full version of this app you will have to download all files
 5 - Naviage back to the 'SERVER' folder in the terminal and run 'npm run dev', this will start the server in Local Host:5000.
 6 - Navigate back to the 'wordle' folder in the terminal and run 'npm start'. The app will open in your browser and you can begin playing.
 
-**HINT** -- YOU CAN SEE THE CORRECT ANSWER LOGGED TO THE CONSOLE TO SKIP TO SEE SHE SCORES BOARD SERVER FEATURE
+**HINT** -- YOU CAN SEE THE CORRECT ANSWER LOGGED TO THE CONSOLE TO SKIP TO THE SCORES BOARD SERVER FEATURE.
 
 ## Usage
 
