@@ -6,6 +6,8 @@ import Modal from "../modal/modal";
 
 const Wordle = ({ solution }) => {
 
+
+    //Below code importants variables / functions from hooks //
     const { currentGuess, handleKeyup, guesses, isCorrect, turn, usedKeys } = useWordle(solution)
     const [showModal, setShowModal] = useState(false);
 

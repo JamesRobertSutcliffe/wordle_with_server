@@ -19,7 +19,6 @@ const scores = [
     }
 ]
 
-// not working / add push to mongo // deploy with heroku
 //Express function that sorts POST requests//
 app.all('/api', (req, res) => {
     scores.push(req.body);
